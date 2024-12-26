@@ -10,4 +10,9 @@
     <PackageReference Include="AutoMapper" Version="13.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CatTask.DataLayer\CatTask.DataLayer.csproj" />
+    <ProjectReference Include="..\CatTask.Domain\CatTask.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
