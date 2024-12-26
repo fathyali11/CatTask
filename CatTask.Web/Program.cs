@@ -1,5 +1,6 @@
 using CatTask.DataLayer.Data;
 using CatTask.DataLayer.Repository;
+using CatTask.Domain.Abstractions;
 using CatTask.Domain.FluentValidations.ToDoValidations;
 using CatTask.Domain.IRepository;
 using CatTask.Domain.Mappings;
@@ -24,7 +25,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString);
 });
 
-
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IToDoServices, ToDoServices>();
 
