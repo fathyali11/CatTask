@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35514.174 d17.12
+VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatTask.Web", "CatTask.Web\CatTask.Web.csproj", "{DE8AD32B-DCBD-4698-A07F-B8B61AC3EE09}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatTask.DataLayer", "CatTask.DataLayer\CatTask.DataLayer.csproj", "{3EC0153C-F746-46CA-86AC-EA64F01B7E3C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatTask.Services", "CatTask.Services\CatTask.Services.csproj", "{56DE5FD7-E47D-46FD-91BE-F015492B8B19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProblemSolving", "ProblemSolving\ProblemSolving.csproj", "{7C2DEEC4-A93C-4B95-BFFD-08327E6FE815}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{56DE5FD7-E47D-46FD-91BE-F015492B8B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56DE5FD7-E47D-46FD-91BE-F015492B8B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56DE5FD7-E47D-46FD-91BE-F015492B8B19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C2DEEC4-A93C-4B95-BFFD-08327E6FE815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C2DEEC4-A93C-4B95-BFFD-08327E6FE815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C2DEEC4-A93C-4B95-BFFD-08327E6FE815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C2DEEC4-A93C-4B95-BFFD-08327E6FE815}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
