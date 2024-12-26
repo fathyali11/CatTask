@@ -1,0 +1,6 @@
+@CatTask.Web_HostAddress = http://localhost:5007
+
+GET {{CatTask.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
