@@ -9,10 +9,10 @@ public class GenericRepository<T>(ApplicationDbContext context) : IGenericReposi
     private readonly ApplicationDbContext _context = context;
     private readonly DbSet<T> _dbSet = context.Set<T>();
 
-    public async Task<IEnumerable<T>> GetAllAsync()
+    public async Task<IEnumerable<T>> GetAllAsync(CancellationToken cancellationToken = default)
         => await _dbSet.ToListAsync();
 
-    public async Task<T?> GetByAsync(Expression<Func<T, bool>> predicate)
+    public async Task<T?> GetByAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken = default)
     {
         var entity = await _dbSet.FirstOrDefaultAsync(predicate);
         return entity!;
@@ -23,9 +23,9 @@ public class GenericRepository<T>(ApplicationDbContext context) : IGenericReposi
         var entity = await _dbSet.FindAsync(id);
         return entity!;
     }
-    public async Task<T> AddAsync(T entity)
+    public async Task<T> AddAsync(T entity, CancellationToken cancellationToken = default)
     {
-        await _dbSet.AddAsync(entity);
+        await _dbSet.AddAsync(entity,cancellationToken);
         return entity;  
     }
 
