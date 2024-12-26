@@ -1,10 +1,11 @@
-﻿namespace CatTask.Domain.IRepository;
+﻿using System.Linq.Expressions;
+
+namespace CatTask.Domain.IRepository;
 public interface IGenericRepository<T> where T : class
 {
     Task<IEnumerable<T>> GetAllAsync();
-    Task<T> GetByIdAsync(int id);
+    Task<T?> GetByIdAsync(int id);
+    Task<T?> GetByAsync(Expression<Func<T,bool>>predicate);
     Task<T> AddAsync(T entity);
-    Task<T> UpdateAsync(T entity);
-    Task<T> DeleteAsync(int id);
-    Task<T> DeleteRangeAsync(IEnumerable<T> entities);
+    Task DeleteAsync(int id);
 }
