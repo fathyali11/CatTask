@@ -8,4 +8,5 @@ public interface IToDoServices:IToDoRepository
     Task<ToDoResponse> GetToDosAsync(int id, CancellationToken cancellationToken = default);
     Task<ToDoResponse> AddToDosAsync(ToDoRequest request, CancellationToken cancellationToken = default);
     Task<ToDoResponse> UpdateToDosAsync(int id, ToDoRequest request, CancellationToken cancellationToken = default);
+    Task<bool> DeleteToDosAsync(int id, CancellationToken cancellationToken = default);
 }

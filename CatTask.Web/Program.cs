@@ -1,6 +1,13 @@
 using CatTask.DataLayer.Data;
+using CatTask.DataLayer.Repository;
+using CatTask.Domain.FluentValidations.ToDoValidations;
+using CatTask.Domain.IRepository;
+using CatTask.Domain.Mappings;
+using CatTask.Services.Services;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
-
+using Scalar.AspNetCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -17,12 +24,24 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString);
 });
 
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IToDoServices, ToDoServices>();
+
+builder.Services.AddAutoMapper(typeof(ToDoMappings).Assembly);
+
+
+builder.Services.AddValidatorsFromAssembly(typeof(ToDoRequestValidator).Assembly);
+builder.Services.AddFluentValidationAutoValidation()
+    .AddFluentValidationClientsideAdapters();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 app.UseHttpsRedirection();

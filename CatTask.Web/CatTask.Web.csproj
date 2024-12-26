@@ -17,14 +17,12 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
+    <PackageReference Include="Scalar.AspNetCore" Version="1.2.72" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CatTask.DataLayer\CatTask.DataLayer.csproj" />
+    <ProjectReference Include="..\CatTask.Services\CatTask.Services.csproj" />
   </ItemGroup>
 
 </Project>

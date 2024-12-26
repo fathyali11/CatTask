@@ -41,4 +41,12 @@ public class ToDoServices(IUnitOfWork unitOfWork,ApplicationDbContext contex,IMa
         var response = _mapper.Map<ToDoResponse>(todo);
         return response;    
     }
+    public async Task<bool> DeleteToDosAsync(int id, CancellationToken cancellationToken = default)
+    {
+        if (id <= 0)
+            return false;
+        await _unitOfWork.ToDoRepository.DeleteAsync(id);
+        await _unitOfWork.SaveChanges(cancellationToken);
+        return true;
+    }
 }
