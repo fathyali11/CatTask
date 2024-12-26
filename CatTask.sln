@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatTask.Domain", "CatTask.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatTask.DataLayer", "CatTask.DataLayer\CatTask.DataLayer.csproj", "{3EC0153C-F746-46CA-86AC-EA64F01B7E3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatTask.Services", "CatTask.Services\CatTask.Services.csproj", "{56DE5FD7-E47D-46FD-91BE-F015492B8B19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3EC0153C-F746-46CA-86AC-EA64F01B7E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EC0153C-F746-46CA-86AC-EA64F01B7E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EC0153C-F746-46CA-86AC-EA64F01B7E3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56DE5FD7-E47D-46FD-91BE-F015492B8B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56DE5FD7-E47D-46FD-91BE-F015492B8B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56DE5FD7-E47D-46FD-91BE-F015492B8B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56DE5FD7-E47D-46FD-91BE-F015492B8B19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
