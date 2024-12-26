@@ -31,6 +31,14 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString);
 });
 
+
+builder.Services.AddDistributedMemoryCache();
+
+#pragma warning disable
+builder.Services.AddHybridCache();
+#pragma warning restore
+
+
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IToDoServices, ToDoServices>();
 
