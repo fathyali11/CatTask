@@ -20,4 +20,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CatTask.DataLayer\CatTask.DataLayer.csproj" />
+  </ItemGroup>
+
 </Project>
